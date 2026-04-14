@@ -1,10 +1,15 @@
 import { Archive, BellOff, Delete, MessageSquareText, Phone, PhoneCall, Video } from 'lucide-react';
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import { useParams } from 'react-router';
+import { FriendsContext } from '../context/FriendsProvider';
 
 const friendsPromise = fetch('/friends.json').then(res => res.json());
 
+
 const FriendsDetails = () => {
+
+    const {handleButton} = useContext(FriendsContext)
+    
 
     const statusStyles = {
         Overdue: "bg-red-100 text-red-600 border-red-200",
@@ -81,13 +86,13 @@ const FriendsDetails = () => {
                         <div className="bg-white p-6 rounded-2xl">
                             <h3 className="text-emerald-800 font-semibold mb-4">Quick Check-In</h3>
                             <div className="grid grid-cols-3 gap-4">
-                                <button className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Call")} className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
                                     <Phone /> Call
                                 </button>
-                                <button className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Text")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
                                     <MessageSquareText /> Text
                                 </button>
-                                <button className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Video")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
                                     <Video /> Video
                                 </button>
 
