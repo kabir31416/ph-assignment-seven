@@ -5,30 +5,36 @@ import MainLayout from '../layout/Mainlayout';
 import TimelinePage from '../pages/TimelinePage';
 import StatsPage from '../pages/StatsPage';
 import ErrorPage from '../pages/ErrorPage';
+import FriendsDetails from '../pages/FriendsDetails';
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout/>,
+    element: <MainLayout />,
     children: [
-    {
-      index: true,
-      element: <HomePage/>
-    },
+      {
+        index: true,
+        element: <HomePage />
+      },
 
-    {
+      {
         path: "/timeline",
         element: <TimelinePage></TimelinePage>
-    },
+      },
 
-    {
+      {
         path: "/stats",
         element: <StatsPage></StatsPage>
-    },
-    
-  ],
- 
-  errorElement: <ErrorPage></ErrorPage>,
+      },
+
+      {
+        path: "/friendsdetails/:id",
+        element: <FriendsDetails></FriendsDetails>
+      },
+
+    ],
+
+    errorElement: <ErrorPage></ErrorPage>,
   },
 
 ]);

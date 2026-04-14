@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Cards = ({ friend }) => {
 
@@ -9,13 +10,10 @@ const Cards = ({ friend }) => {
     };
 
     return (
-        <div className='card bg-base-100 card-xs shadow-sm p-6 flex flex-col gap-3 items-center justify-center'>
+        <Link to={`/friendsdetails/${friend.id}`} className='card bg-base-100 card-xs shadow-sm p-6 flex flex-col gap-3 items-center justify-center'>
             <img className='rounded-full h-20 w-20' src={friend.picture} alt="" />
-
             <h2 className='font-semibold text-2xl'>{friend.name}</h2>
-
             <p>{friend.days_since_contact}d ago</p>
-
             <div className='flex gap-2'>
                 {
                     friend.tags.map((tag, index) => (
@@ -23,12 +21,10 @@ const Cards = ({ friend }) => {
                     ))
                 }
             </div>
-
             <div className={`px-3 py-1 rounded-full border ${statusStyles[friend.status] || 'bg-gray-100'}`}>
                 {friend.status}
             </div>
-
-        </div>
+        </Link>
     );
 };
 
