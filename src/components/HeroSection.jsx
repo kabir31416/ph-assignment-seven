@@ -11,7 +11,7 @@ const HeroSection = () => {
                 <button className='btn text-white bg-[#244D3F] my-5'><Plus/> Add a Friend</button>
             </div>
 
-            <div className='flex items-center justify-center gap-8'>
+            <div className='flex items-center justify-center gap-8 sm: flex-col md:flex-row'>
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
                     <h1 className='text-4xl text-green-800 font-bold'>10</h1>
                     <p>Total Friends</p>
