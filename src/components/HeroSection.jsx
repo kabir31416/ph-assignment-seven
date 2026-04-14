@@ -13,22 +13,22 @@ const HeroSection = () => {
 
             <div className='flex items-center justify-center gap-8'>
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl'>10</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>10</h1>
                     <p>Total Friends</p>
                 </div>
 
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl'>3</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>3</h1>
                     <p>On Track</p>
                 </div>
 
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl'>6</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>6</h1>
                     <p>Need Attention</p>
                 </div>
 
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl'>12</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>12</h1>
                     <p>Interactions This Month</p>
                 </div>
             </div>

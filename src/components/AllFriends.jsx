@@ -13,7 +13,7 @@ const AllFriends = () => {
 
 
     return (
-        <div className=''>
+        <div className='pb-20'>
 
             <h1 className='font-semibold text-2xl py-4'>Your friends</h1>
 
