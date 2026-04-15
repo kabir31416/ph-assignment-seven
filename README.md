@@ -1,16 +1,37 @@
-# React + Vite
+# 🤝 KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, streamlined relationship manager designed to help you nurture your connections. Track interactions, stay on top of your communication goals, and never let a meaningful relationship fade away.
 
-Currently, two official plugins are available:
+**🌐 Live Demo:** [ph.atherin.cc](https://ph.atherin.cc)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js, Tailwind CSS
+- **State Management:** Context API
+- **Data Visualization:** Recharts
+- **Icons:** Lucide React
+- **Routing:** React Router DOM
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features
+
+### 1. **Smart Status Categorization**
+Keeps your friend list organized by automatically flagging contacts as **Active**, **Upcoming**, or **Overdue** based on your interaction frequency goals.
+
+### 2. **Interaction History & Quick Actions**
+Easily log **Calls**, **Texts**, or **Video Chats** directly from the dashboard. The app maintains a real-time timeline of all your recent activities.
+
+### 3. **Visual Interaction Insights**
+A sleek **Donut Chart** visualization that gives you an instant breakdown of your communication patterns, helping you see how you're engaging with your circle.
+
+---
+
+## 🛡️ Security Mindset
+Built with clean code and a cybersecurity-first approach. Future updates aim to include secure authentication and encrypted storage to protect your personal network data.
+
+---
+
+**Developed with ❤️ by [kabir31416](https://github.com/kabir31416)**
