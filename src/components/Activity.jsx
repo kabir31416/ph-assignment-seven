@@ -10,11 +10,16 @@ const Activity = () => {
     const { history } = useContext(FriendsContext);
 
     const [filterType, setFilterType] = useState("All")
-
-    const filteredHistory = filterType === "All" ? history : history.filter(item => item.type === filterType)
-
+    const [sortOrder, setSortOrder] = useState("newest");
 
 
+    const filteredHistory = filterType === "All"
+        ? history
+        : history.filter(item => item.type === filterType);
+
+    const sortedHistory = sortOrder === "newest"
+        ? [...filteredHistory]
+        : [...filteredHistory].reverse();
 
     if (!history || history.length === 0) {
         return <div className="py-6 text-gray-500">No recent activity.</div>;
@@ -29,27 +34,38 @@ const Activity = () => {
 
     return (
         <div className="space-y-6">
-                <div className="flex mb-6">
+            <div className="flex mb-6 gap-4">
 
-                    <div className="relative w-48">
-                        <select
-                            value={filterType}
-                            onChange={(e) => setFilterType(e.target.value)}
-                            className="w-full px-4 py-2 bg-white border border-gray-600 rounded text-sm text-gray-700 shadow-sm outline-none cursor-pointer"
-                        >
-                            {['All', 'Call', 'Text', 'Video'].map((type) => (
-                                <option key={type} value={type}>
-                                    {type === 'All' ? 'All' : `${type}`}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-
+                <div className="relative w-48">
+                    <select
+                        value={filterType}
+                        onChange={(e) => setFilterType(e.target.value)}
+                        className="w-full px-4 py-2 bg-white border border-gray-600 rounded text-sm text-gray-700 shadow-sm outline-none cursor-pointer"
+                    >
+                        {['All', 'Call', 'Text', 'Video'].map((type) => (
+                            <option key={type} value={type}>
+                                {type === 'All' ? 'All' : `${type}`}
+                            </option>
+                        ))}
+                    </select>
                 </div>
 
+                <div className="relative w-48">
+                    <select
+                        value={sortOrder}
+                        onChange={(e) => setSortOrder(e.target.value)}
+                        className="w-full px-4 py-2 bg-white border border-gray-600 rounded text-sm text-gray-700 shadow-sm outline-none cursor-pointer"
+                    >
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+
+            </div>
+
             <div className="space-y-4">
-                {filteredHistory.length > 0 ? (
-                    filteredHistory.map((item, index) => (
+                {sortedHistory.length > 0 ? (
+                    sortedHistory.map((item, index) => (
                         <div key={index} className="flex items-center gap-4 p-4 shadow-sm rounded-xl bg-white border border-gray-100">
                             <div className="shrink-0 p-3 bg-gray-50 rounded-full">
                                 {setIcon[item.type] || <Info size={20} />}
