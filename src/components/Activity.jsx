@@ -17,7 +17,7 @@ const Activity = () => {
 
 
     if (!history || history.length === 0) {
-        return <div className="p-6 text-gray-500">No recent activity.</div>;
+        return <div className="py-6 text-gray-500">No recent activity.</div>;
     }
 
     const setIcon = {

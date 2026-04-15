@@ -5,3 +5,7 @@
 :root {
   font-family: "Geist", sans-serif;
 }
+
+html {
+  scrollbar-gutter: stable;
+}

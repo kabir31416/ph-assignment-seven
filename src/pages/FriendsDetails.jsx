@@ -86,13 +86,13 @@ const FriendsDetails = () => {
                         <div className="bg-white p-6 rounded-2xl">
                             <h3 className="text-emerald-800 font-semibold mb-4">Quick Check-In</h3>
                             <div className="grid grid-cols-3 gap-4">
-                                <button onClick={() => handleButton(getFriends.name, "Call")} className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Call")} className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2 cursor-pointer">
                                     <Phone /> Call
                                 </button>
-                                <button onClick={() => handleButton(getFriends.name, "Text")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Text")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2 cursor-pointer">
                                     <MessageSquareText /> Text
                                 </button>
-                                <button onClick={() => handleButton(getFriends.name, "Video")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2">
+                                <button onClick={() => handleButton(getFriends.name, "Video")}  className="py-8 bg-gray-50 rounded-xl hover:bg-gray-100 flex flex-col items-center gap-2 cursor-pointer">
                                     <Video /> Video
                                 </button>
 

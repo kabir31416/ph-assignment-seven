@@ -1,7 +1,12 @@
 import { Plus } from 'lucide-react';
-import React from 'react';
+import React, { use } from 'react';
+
+const friendsPromise = fetch('/friends.json').then(res => res.json());
 
 const HeroSection = () => {
+
+    const friendsData = use(friendsPromise)
+
     return (
         <div className='container pt-20 mx-auto'>
             <div className='flex flex-col items-center justify-center gap-5'>
@@ -13,12 +18,12 @@ const HeroSection = () => {
 
             <div className='flex items-center justify-center gap-8 sm: flex-col md:flex-row'>
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl text-green-800 font-bold'>10</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>{friendsData.length}</h1>
                     <p>Total Friends</p>
                 </div>
 
                 <div className='card bg-base-100 card-xs shadow-sm flex flex-col items-center justify-center p-8 gap-4 w-full'>
-                    <h1 className='text-4xl text-green-800 font-bold'>3</h1>
+                    <h1 className='text-4xl text-green-800 font-bold'>4</h1>
                     <p>On Track</p>
                 </div>
 
