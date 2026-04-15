@@ -14,7 +14,16 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
+        element: <HomePage />,
+
+        loader: async () => {
+          const friendsPromise = new Promise(resolve => {
+            setTimeout(() => {
+              resolve(fetch('/friends.json').then(res => res.json()));
+            }, 1000);
+          });
+          return { friends: friendsPromise };
+        }
       },
 
       {
